@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/logo.png" alt="logo" style="width: 150px; height: 150px;">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title><img src="assets/logo.png" alt="logo" style="width: 150px; height: 150px;"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!-- Upload Button -->
+    <button class="rounded-button" (click)="presentPopover($event)">+ Upload File</button>
+  </div>
+</ion-content>

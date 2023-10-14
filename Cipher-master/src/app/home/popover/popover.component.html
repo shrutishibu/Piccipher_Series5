@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-item (click)="takePicture()">
+    <ion-label>Take Picture</ion-label>
+  </ion-item>
+  <ion-item (click)="uploadFromMedia()">
+    <ion-label>Upload from Media</ion-label>
+  </ion-item>
+  <ion-item (click)="UploadURL()">
+    <ion-label>Upload URL</ion-label>
+  </ion-item>
+</ion-list>
+
+<img [src]="imageUrl" *ngIf="imageUrl" alt="Uploaded Image" />

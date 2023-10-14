@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Success</title>
+</head>
+<body>
+    <h2>Upload Success</h2>
+    <p>Your image has been successfully uploaded and processed.</p>
+
+    <!-- Display the uploaded image (if applicable) -->
+    {% if uploaded_image %}
+    <img src="{{ uploaded_image.url }}" alt="Uploaded Image">
+    {% endif %}
+
+    <p><a href="{% url 'camera_upload' %}">Back to Camera Upload</a></p>
+</body>
+</html>

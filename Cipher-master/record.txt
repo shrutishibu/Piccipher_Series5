@@ -1,0 +1,150 @@
+i first installed ionic
+then create project cipher
+it had a structure already
+then made modifications to the homepage
+added upload button which gives option of,
+	take pic
+	upload from device
+for upload from device installed plugins capacitor core and filesystem
+
+
+
+
+
+
+TAKE PIC
+
+ try {
+      const image = await Camera.getPhoto({
+        resultType: CameraResultType.DataUrl, // You can choose other result types if needed
+        source: CameraSource.Camera, // Use the device camera
+      });
+
+      // Here, 'image.dataUrl' contains the base64-encoded image data
+      // You can handle or upload this image data as needed
+
+      this.dismissPopover();
+    } catch (error) {
+      console.error('Error taking picture:', error);
+    }
+  }
+
+
+UPLOAD FROM DEVICE
+
+try {
+      const filePickerResult = await Filesystem.getUri();
+
+      if (filePickerResult && filePickerResult.uri) {
+        // You can handle the selected directory URI here
+        console.log('Selected directory URI:', filePickerResult.uri);
+        // Implement your logic to process the selected media files
+
+        this.dismissPopover();
+      }
+    } catch (error) {
+      console.error('Error selecting directory:', error);
+    }
+  }
+
+  dismissPopover() {
+    this.popoverController.dismiss();
+  }
+
+
+
+
+
+
+
+
+
+  async takePicture() {
+    try {
+      const image: Photo = await Camera.getPhoto({
+        resultType: CameraResultType.Uri, // Store the image as a file URI
+        source: CameraSource.Camera, // Use the device camera
+      });
+
+      // Here, 'image' contains the photo information
+      // You can access the URI of the image using image.webPath
+
+      // Now, let's move the image to a specific directory and handle it
+      if (image.webPath) {
+        await this.moveAndHandleImage(image);
+      } else {
+        console.error('Image webPath is undefined');
+      }
+
+      // Close the popover
+      this.dismissPopover();
+    } catch (error) {
+      console.error('Error taking picture:', error);
+    }
+  }
+
+
+
+url add
+store image in mongodb
+
+
+
+
+
+
+<<<<<<<<<TO IMPLEMENT>>>>>>>>>>>>>>>>>>>>
+Creating an app to extract text from an image and convert it from unstructured to structured data involves multiple steps, and the Ionic framework can handle the frontend part of this process. Here's what you might need to do in Ionic:
+
+1. **Design the User Interface (UI)**:
+   - Create user-friendly screens for capturing/uploading images.
+   - Implement a feature to take pictures using the device's camera or select images from the gallery.
+   - Provide an interface for the user to initiate text extraction.
+
+2. **Implement Image Upload**:
+   - Allow users to upload images from their device.
+   - Implement functionality to send the image to your Django backend for text extraction.
+
+3. **Display Extracted Text**:
+   - Once the text is extracted by the backend, display it to the user.
+   - Consider how you want to present this information, whether it's in a simple text view or a more structured format.
+
+4. **Handling User Interaction**:
+   - Implement buttons or actions for users to trigger the text extraction process.
+   - Include loading indicators or progress bars to give users feedback during the extraction process.
+
+5. **Error Handling**:
+   - Handle cases where text extraction fails or encounters errors. Provide appropriate error messages to users.
+
+6. **Data Presentation**:
+   - If you want to present the unstructured data (extracted text) in a structured format within the app, you'll need to design the UI for this as well. Consider how you want to organize and display the structured data.
+
+7. **User Feedback**:
+   - Implement feedback mechanisms, such as success messages, notifications, or dialogs, to inform users about the status of their image processing.
+
+8. **Testing and Validation**:
+   - Thoroughly test the app to ensure that it works as expected and handles different scenarios gracefully.
+
+9. **Integration with Backend**:
+   - Communicate with your Django REST API to send images for processing and receive the extracted text and structured data.
+   - Implement HTTP requests (e.g., POST requests) to interact with your backend endpoints.
+
+10. **Security**:
+    - Consider security measures, such as handling user authentication and securing the communication between the frontend and backend.
+
+11. **Optimization**:
+    - Optimize the app's performance and consider factors like image compression to reduce data transfer times.
+
+12. **User Experience (UX)**:
+    - Focus on creating a smooth and intuitive user experience, including navigation, transitions, and user interface responsiveness.
+
+Remember that this is just an overview of what needs to be done in the Ionic frontend. You'll also need to work on the Django backend to handle image processing, text extraction, and data transformation. Proper coordination between the frontend and backend is crucial for the success of your app.
+
+
+
+
+
+https://images.app.goo.gl/mnPWqXhTi7t1gNXf7
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ABlocksatz-Beispiel_deutsch%2C_German_text_sample_with_fully_justified_text.svg&psig=AOvVaw0oZ3HUw5siXXm_hWxVeMPe&ust=1696783416309000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJDT9_aw5IEDFQAAAAAdAAAAABAE
+

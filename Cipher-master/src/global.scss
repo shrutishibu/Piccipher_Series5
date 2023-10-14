@@ -1,0 +1,73 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/* Centered Rounded Button Styles */
+.rounded-button {
+    display: inline-block;
+    border-radius: 20px; /* Adjust the radius to your liking */
+    padding: 20px 40px; /* Adjust padding for a larger button */
+    background-color: #00008B; /* Button background color */
+    color: #fff; /* Text color */
+    font-size: 24px; /* Adjust font size for larger text */
+    font-weight: bold; /* Make the text bold */
+    border: none; /* Remove the default button border */
+    box-shadow: none; /* Remove any default box shadow */
+    outline: none; /* Remove the default outline on focus (for accessibility) */
+  }
+  
+  /* Style for the row of circular buttons */
+  .circular-button-row {
+    display: flex;
+    justify-content: center; /* Center-align the buttons horizontally */
+    align-items: center; /* Center-align the buttons vertically */
+    margin-top: 20px; /* Adjust the margin to control spacing between the row and other elements */
+  }
+  
+  /* Circular Button Styles */
+  .circular-button {
+    width: 50px; /* Adjust the button width to make it smaller */
+    height: 50px; /* Adjust the button height to make it smaller */
+    border-radius: 50%; /* Create a circular shape */
+    background-color: #00008B; /* Button background color */
+    color: #fff; /* Text color */
+    font-size: 14px; /* Adjust the font size for smaller text */
+    font-weight: bold; /* Make the text bold */
+    border: none; /* Remove the default button border */
+    box-shadow: none; /* Remove any default box shadow */
+    outline: none; /* Remove the default outline on focus (for accessibility) */
+    margin: 0 10px; /* Adjust the margin to control spacing between the buttons in the row */
+  }
+  
+  /* Remove margin for the first and last circular buttons in the row */
+  .circular-button:first-child {
+    margin-left: 0;
+  }
+  
+  .circular-button:last-child {
+    margin-right: 0;
+  }
+  
