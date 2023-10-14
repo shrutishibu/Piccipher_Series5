@@ -4,6 +4,10 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -172,4 +176,4 @@ CORS_ALLOW_HEADERS = (
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8100",  # Update with your Ionic application's URL
 ]
-CORS_ALLOW_ALL_ORIGINS = False
+#CORS_ALLOW_ALL_ORIGINS = False

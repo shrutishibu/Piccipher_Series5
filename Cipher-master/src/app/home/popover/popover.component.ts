@@ -3,9 +3,7 @@ import { PopoverController } from '@ionic/angular';
 import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Router } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 @Component({
   selector: 'app-popover',
@@ -13,22 +11,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./popover.component.scss'],
 })
 export class PopoverComponent {
-  imageUrl: string = ''; // Variable to store the URL of the image
-  imageUploadResponse$: Observable<any>;
+  imageUrl: string = '';
 
-  constructor(
-    private popoverController: PopoverController,
-    private router: Router,
-    private http: HttpClient
-  ) {
-    this.imageUploadResponse$ = new Observable();
+  constructor(private popoverController: PopoverController, private router: Router) {
+    defineCustomElements(window);
   }
 
   async takePicture() {
     try {
       const image: Photo = await Camera.getPhoto({
-        resultType: CameraResultType.Uri, // Store the image as a file URI
-        source: CameraSource.Camera, // Use the device camera
+        resultType: CameraResultType.Uri,
+        source: CameraSource.Camera,
       });
 
       if (image.webPath) {
@@ -47,7 +40,7 @@ export class PopoverComponent {
     try {
       const image: Photo = await Camera.getPhoto({
         resultType: CameraResultType.Uri,
-        source: CameraSource.Photos, // Open the device's media library
+        source: CameraSource.Photos,
       });
 
       if (image.webPath) {
@@ -61,7 +54,7 @@ export class PopoverComponent {
     }
   }
 
-  async UploadURL() {
+  async uploadurl(){
     const imageUrl = prompt('Enter the URL of the image:');
 
     if (imageUrl) {
@@ -71,30 +64,13 @@ export class PopoverComponent {
   }
 
   async moveAndHandleImage(imageUri: string) {
-    const newFileName = '${new Date().getTime()}.jpeg';
+    const newFileName = `${new Date().getTime()}.jpeg`;
 
     const copiedImage = await Filesystem.copy({
       from: imageUri,
-      to: Directory.Data + '/' + newFileName,
+      to: `${Directory.Data}/${newFileName}`,
     });
-
-    const uploadUrl = 'https://localhost:1800/api/upload-image';
-
-    const formData = new FormData();
-    formData.append('image', copiedImage.uri);
-
-    const headers = new HttpHeaders();
-    headers.set('Authorization', 'Bearer your-access-token');
-
-    this.imageUploadResponse$ = this.http.post(uploadUrl, formData, { headers }).pipe(
-      map((response) => {
-        console.log('Image uploaded successfully:', response);
-        // Handle the response here
-        return response;
-      })
-    );
   }
-
 
   dismissPopover() {
     this.popoverController.dismiss();

@@ -1,8 +1,9 @@
 # serializers.py
-from rest_framework import serializers
-from .models import ImageData
 
-class ImageDataSerializer(serializers.ModelSerializer):
+from rest_framework import serializers
+from .models import UploadedImage
+
+class UploadedImageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ImageData
+        model = UploadedImage
         fields = '__all__'

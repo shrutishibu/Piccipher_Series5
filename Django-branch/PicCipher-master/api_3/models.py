@@ -1,5 +1,12 @@
 from django.db import models
 
+# models.py
+from django.db import models
+
+class UploadedImage(models.Model):
+    image = models.ImageField(upload_to='uploads/')
+
+
 class GroceryItem(models.Model):
     name = models.CharField(max_length=255)
     quantity = models.IntegerField()

@@ -238,3 +238,29 @@ STREAM b'tEXt' 16516 37
 C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /favicon.ico
+Method Not Allowed: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+tag: Orientation (274) - type: long (4) - value: b'\x01\x00\x00\x00'
+tag: Software (305) - type: string (2) Tag Location: 34 - Data Location: 62 - value: b'Snapseed 2.0\x00'
+tag: DateTime (306) - type: string (2) Tag Location: 46 - Data Location: 75 - value: b'2023:10:07 11:23:35\x00'
+tag: ExifIFD (34665) - type: long (4) - value: b'_\x00\x00\x00'
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+Not Found: /api/get_items/
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+Watching for file changes with StatReloader

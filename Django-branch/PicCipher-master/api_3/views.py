@@ -8,6 +8,29 @@ import pytesseract
 import pymongo
 import os
 from django.conf import settings
+from rest_framework import generics
+from .models import UploadedImage
+from .serializers import UploadedImageSerializer
+
+"""
+class UploadedImageCreateView(generics.CreateAPIView):
+    queryset = UploadedImage.objects.all()
+    serializer_class = UploadedImageSerializer
+"""
+# views.py
+
+from django.shortcuts import render, redirect
+from .forms import UploadedImageForm
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = UploadedImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('success')  # replace 'success' with your success URL name
+    else:
+        form = UploadedImageForm()
+    return render(request, 'upload_image.html', {'form': form})
 
 class ImageUploadAndList(APIView):
     parser_classes = (MultiPartParser, FormParser)
