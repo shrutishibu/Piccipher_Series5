@@ -24,12 +24,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'piccipherdraft3.urls'
@@ -106,8 +106,10 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ('*',)
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8100",  # Update with your Ionic application's URL
+    "http://localhost:8100", 
+    "http://localhost:3000" , # Update with your Ionic application's URL
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 

@@ -5,6 +5,7 @@ import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Router } from '@angular/router'; 
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 @Component({
   selector: 'app-popover',
@@ -76,16 +77,32 @@ export class PopoverComponent {
     }
   }
   */
-
   async uploadurl() {
     try {
-      // Prompt the user for an image URL
       const imageUrl = prompt('Enter the URL of the image:');
       if (imageUrl) {
         console.log('User provided URL:', imageUrl);
   
-        const proxyUrl = 'http://localhost:3000/image?imageUrl=' + encodeURIComponent(imageUrl);
-        this.router.navigate(['/image-display'], { queryParams: { imageUrl: proxyUrl } });
+        const response = await fetch(imageUrl);
+        const blob = await response.blob();
+  
+        const formData = new FormData();
+        formData.append('image', blob, 'image.jpg'); // Use 'image' as the key name
+  
+        const config = {
+          headers: {
+            'content-type': 'multipart/form-data'
+          }
+        };
+  
+        const result = await axios.post('http://127.0.0.1:8000/api/upload-image/', formData, config);
+        console.log('Response:', result.data);
+  
+        const contentType = result.headers['content-type'];
+  
+        const imageElement = document.createElement('img');
+        imageElement.src = `data:${contentType};base64,${btoa(String.fromCharCode(...new Uint8Array(result.data)))}`;
+        document.body.appendChild(imageElement);
       } else {
         console.error('No image URL provided.');
       }
@@ -93,8 +110,9 @@ export class PopoverComponent {
       console.error('Error occurred during URL upload:', error);
     }
   }
+     
   
-
+  
   async moveAndHandleImage(imageUri: string) {
     const newFileName = '${new Date().getTime()}.jpeg';
     const destinationDirectory = 'C:/Users/Shibu Punneth Varkey/OneDrive/Documents/VS Code Codes/Piccipher/Django-branch/PicCipher-master/media/uploads';

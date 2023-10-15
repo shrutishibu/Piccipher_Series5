@@ -13,27 +13,11 @@ from rest_framework import generics
 from .models import UploadedImage
 from .serializers import UploadedImageSerializer
 
-"""
-class UploadedImageCreateView(generics.CreateAPIView):
-    queryset = UploadedImage.objects.all()
-    serializer_class = UploadedImageSerializer
-"""
 # views.py
 
 from django.shortcuts import render, redirect
 from .forms import UploadedImageForm
 
-"""
-def upload_image(request):
-    if request.method == 'POST':
-        form = UploadedImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('success')  # replace 'success' with your success URL name
-    else:
-        form = UploadedImageForm()
-    return render(request, 'upload_image.html', {'form': form})
-"""
 def upload_image(request):
     if request.method == 'POST':
         form = UploadedImageForm(request.POST, request.FILES)
@@ -64,6 +48,7 @@ class ImageUploadAndList(APIView):
         with Image.open(image) as img:
             ocr_text = pytesseract.image_to_string(img)
         return ocr_text
+    
     
     def store_data_in_mongodb(self, uploaded_image, ocr_text):
         upload_dir = os.path.join(settings.MEDIA_ROOT, 'uploads')
