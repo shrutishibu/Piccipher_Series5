@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module'; // Import the HomePageModule
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,7 +12,8 @@ import { HomePageModule } from './home/home.module'; // Import the HomePageModul
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HomePageModule, // Add the HomePageModule to the imports
+    HomePageModule, 
+    HttpClientModule,
   ],
   bootstrap: [AppComponent],
 })

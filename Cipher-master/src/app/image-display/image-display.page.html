@@ -1,3 +1,4 @@
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -10,4 +11,25 @@
   <ion-item>
     <img [src]="retrievedImage" alt="User's Image">
   </ion-item>
+</ion-content>
+-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Image Display
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <img [src]="retrievedImage" alt="User's Image">
+  </ion-item>
+  <ion-item (click)="uploadImage()">
+  <ion-button expand="full">Upload!</ion-button>
+</ion-item>
 </ion-content>

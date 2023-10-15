@@ -264,3 +264,22 @@ Not Found: /api/get_items/
 Method Not Allowed: /api/upload-image/
 Bad Request: /api/upload-image/
 Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+tag: YResolution (283) - type: rational (5) Tag Location: 22 - Data Location: 146 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 154 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+tag: ImageWidth (256) - type: long (4) - value: b'\x80\x07\x00\x00'
+tag: Software (305) - type: string (2) Tag Location: 58 - Data Location: 162 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+tag: ImageLength (257) - type: long (4) - value: b'@\x10\x00\x00'
+tag: ImageDescription (270) - type: string (2) Tag Location: 82 - Data Location: 194 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+tag: ExifIFD (34665) - type: long (4) - value: b'\xe2\x00\x00\x00'
+tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+tag: Orientation (274) - type: short (3) - value: b'\x00\x00'
+tag: GPSInfoIFD (34853) - type: long (4) - value: b'\xa0\x01\x00\x00'
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
