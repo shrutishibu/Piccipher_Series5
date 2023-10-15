@@ -283,3 +283,218 @@ Method Not Allowed: /api/upload-image/
 Watching for file changes with StatReloader
 Not Found: /
 Method Not Allowed: /api/upload-image/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /favicon.ico
+Unsupported Media Type: /api/upload-image/
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Unsupported Media Type: /api/upload-image/
+Unsupported Media Type: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Unsupported Media Type: /api/upload-image/
+Unsupported Media Type: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/upload-image/
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /api/upload-image/
+Not Found: /api/upload-image/
+Not Found: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Internal Server Error: /api/upload-image/
+Traceback (most recent call last):
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py", line 47, in upload_image
+    return render(request, 'upload_image.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload_image.html
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/upload-image/
+Traceback (most recent call last):
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py", line 47, in upload_image
+    return render(request, 'upload_image.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload_image.html
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /api/api/upload-images
+Method Not Allowed: /api/api/upload-image/
+Method Not Allowed: /api/api/upload-image/
+Method Not Allowed: /api/api/upload-image/
+Bad Request: /api/api/upload-image/
+Not Found: /api/upload-image/
+Not Found: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Internal Server Error: /api/upload-image/
+Traceback (most recent call last):
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py", line 47, in upload_image
+    return render(request, 'upload_image.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload_image.html
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Internal Server Error: /api/upload-image/
+Traceback (most recent call last):
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py", line 47, in upload_image
+    return render(request, 'upload_image.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload_image.html
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Internal Server Error: /api/upload-image/
+Traceback (most recent call last):
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py", line 47, in upload_image
+    return render(request, 'upload_image.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shibu Punneth Varkey\.virtualenvs\Shibu_Punneth_Varkey-OTaJPIlG\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload_image.html
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /api/upload-image/
+Method Not Allowed: /api/api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /api/api/upload-image/
+Method Not Allowed: /api/upload-image/
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\views.py changed, reloading.
+Watching for file changes with StatReloader
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\api_3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Method Not Allowed: /api/upload-image/
+Bad Request: /api/upload-image/
+C:\Users\Shibu Punneth Varkey\OneDrive\Documents\VS Code Codes\Piccipher\Django-branch\PicCipher-master\piccipherdraft3\settings.py changed, reloading.

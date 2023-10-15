@@ -1,11 +1,8 @@
-from django.db import models
-
 # models.py
 from django.db import models
 
 class UploadedImage(models.Model):
     image = models.ImageField(upload_to='uploads/')
-
 
 class GroceryItem(models.Model):
     name = models.CharField(max_length=255)
@@ -16,9 +13,6 @@ class GroceryReceipt(models.Model):
     date = models.DateField()
     items = models.ManyToManyField(GroceryItem)
 
-class UploadedImage(models.Model):
-    image = models.ImageField(upload_to='uploads/')
-    
 from djongo import models
 
 class ImageData(models.Model):

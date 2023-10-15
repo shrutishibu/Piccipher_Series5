@@ -42,8 +42,9 @@ export class ImageDisplayPage {
 }*/
 
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-image-display',
@@ -68,7 +69,6 @@ export class ImageDisplayPage {
 
   async fetchImage(url: string) {
     try {
-      console.log("i was in fetch image");
       if (url) {
         const response = await fetch(url);
         if (!response.ok) {
@@ -82,26 +82,31 @@ export class ImageDisplayPage {
     }
   }
 
-  async uploadImage() {
+  async uploadImage(imageData: FormData) {
+    const url = 'http://127.0.0.1:8000/api/upload-image/'; // Replace with the actual URL
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
     try {
-      console.log("i was in upload image");
-      const response = await fetch('http://127.0.0.1:8000/api/upload-image/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ image: this.retrievedImage })
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-      console.log('Image uploaded successfully!', data);
+      const response = await this.http.post(url, imageData, { headers }).toPromise();
+      console.log('Image uploaded successfully', response);
     } catch (error) {
       console.error('Error uploading image:', error);
     }
   }
-}
 
+  triggerImageUpload() {
+    if (this.retrievedImage) {
+      fetch(this.retrievedImage)
+        .then(response => response.blob())
+        .then(blob => {
+          const imageData = new FormData();
+          imageData.append('image', blob, 'image.jpg'); // Adjust the filename as needed
+          this.uploadImage(imageData);
+        })
+        .catch(error => {
+          console.error('Error fetching image:', error);
+        });
+    }
+  }
+
+}

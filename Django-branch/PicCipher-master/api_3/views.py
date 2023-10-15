@@ -1,4 +1,5 @@
 from PIL import Image
+from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -22,6 +23,7 @@ class UploadedImageCreateView(generics.CreateAPIView):
 from django.shortcuts import render, redirect
 from .forms import UploadedImageForm
 
+"""
 def upload_image(request):
     if request.method == 'POST':
         form = UploadedImageForm(request.POST, request.FILES)
@@ -31,6 +33,18 @@ def upload_image(request):
     else:
         form = UploadedImageForm()
     return render(request, 'upload_image.html', {'form': form})
+"""
+def upload_image(request):
+    if request.method == 'POST':
+        form = UploadedImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'message': 'Image uploaded successfully!'})
+        else:
+            return JsonResponse({'message': 'Error uploading image'}, status=400)
+    else:
+        form = UploadedImageForm()
+        return render(request, 'upload_image.html', {'form': form})
 
 class ImageUploadAndList(APIView):
     parser_classes = (MultiPartParser, FormParser)

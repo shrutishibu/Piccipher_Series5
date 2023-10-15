@@ -26,23 +26,12 @@ export class PopoverComponent {
         resultType: CameraResultType.DataUrl, // Store the image as a file URI
         source: CameraSource.Camera, // Use the device camera
       });
-
-      // Here, 'image' contains the photo information
-      // You can access the URI of the image using image.webPath
-
-      // Now, let's move the image to a specific directory and handle it
       if (image && image.dataUrl) {
         this.router.navigate(['/image-display'], { queryParams: { imageUrl: image.dataUrl } });
         // await this.moveAndHandleImage(image.dataUrl);
       } else {
         console.error('Image or image data URL is undefined');
       }
-      /*if (image.webPath) {
-        await this.moveAndHandleImage(image.webPath);
-      } else {
-        console.error('Image webPath is undefined');
-      }*/
-
       // Close the popover
       this.dismissPopover();
     } catch (error) {
@@ -56,14 +45,6 @@ export class PopoverComponent {
         resultType: CameraResultType.DataUrl,
         source: CameraSource.Photos, // Open the device's media library
       });
-      /*console.log(image.webPath);
-      if (image.webPath) {
-        // Extract the URI from the Photo object and proceed
-        const imageUri = image.webPath;
-        await this.moveAndHandleImage(imageUri);
-      } else {
-        console.error('Selected image webPath is undefined');
-      }*/
       if (image && image.dataUrl) {
         this.router.navigate(['/image-display'], { queryParams: { imageUrl: image.dataUrl } });
         // await this.moveAndHandleImage(image.dataUrl);
@@ -77,19 +58,42 @@ export class PopoverComponent {
     }
   }
 
+/*
   async uploadurl() {
-    // Prompt the user for an image URL
-    const imageUrl = prompt('Enter the URL of the image:');
-    console.log("hardoce");
-    if (imageUrl) {
-      // Store the URL in the imageUrl variable
-      this.imageUrl = imageUrl;
-
-      this.router.navigate(['image-display', { imageUrl: this.imageUrl }]);
-      // Display the image in the UI
-      // You may want to use an <img> element in your HTML to display the image
+    try {
+      // Prompt the user for an image URL
+      const imageUrl = prompt('Enter the URL of the image:');
+      if (imageUrl) {
+        console.log('User provided URL:', imageUrl);
+  
+        // Navigate to the 'image-display' page with the provided URL
+        this.router.navigate(['/image-display'], { queryParams: { imageUrl: imageUrl } });
+      } else {
+        console.error('No image URL provided.');
+      }
+    } catch (error) {
+      console.error('Error occurred during URL upload:', error);
     }
   }
+  */
+
+  async uploadurl() {
+    try {
+      // Prompt the user for an image URL
+      const imageUrl = prompt('Enter the URL of the image:');
+      if (imageUrl) {
+        console.log('User provided URL:', imageUrl);
+  
+        const proxyUrl = 'http://localhost:3000/image?imageUrl=' + encodeURIComponent(imageUrl);
+        this.router.navigate(['/image-display'], { queryParams: { imageUrl: proxyUrl } });
+      } else {
+        console.error('No image URL provided.');
+      }
+    } catch (error) {
+      console.error('Error occurred during URL upload:', error);
+    }
+  }
+  
 
   async moveAndHandleImage(imageUri: string) {
     const newFileName = '${new Date().getTime()}.jpeg';
